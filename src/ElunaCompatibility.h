@@ -6,6 +6,8 @@
 #ifndef ELUNA_COMPATIBILITY_H
 #define ELUNA_COMPATIBILITY_H
 
+#include "ObjectAccessor.h"
+
 #include <optional>
 
 template<typename T>

@@ -8,6 +8,7 @@
 #define LUAHOOKS_H
 
 #include "ScriptMgr.h"
+#include "QuestDef.h"
 #include "Group.h"
 #include "GameObjectAI.h"
 #include "CreatureAI.h"

@@ -8,7 +8,7 @@
 #define ELUNA_PLAYERMETHODS_H
 
 struct lua_State;
-class player;
+class Player;
 
 namespace LuaPlayer
 {
