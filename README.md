@@ -33,13 +33,13 @@ MOD_ELUNA defaults to OFF. MODULES=OFF, MOD_ELUNA=OFF, or removing this
 module folder excludes the runtime and its Lua dependency. The old ELUNA
 CMake option is accepted as a migration default; an explicit MOD_ELUNA wins.
 
-INSTALL supplies eluna.conf.dist beside worldserver.conf.dist and stages
-lua_scripts with the existing startup example and extensions. Windows builds
-also stage these beside the server binaries. Existing eluna.conf is not
-overwritten.
+INSTALL supplies eluna.conf.dist in configs/modules and stages lua_scripts with
+the existing startup example and extensions. Windows builds also stage these
+beside the server binaries. Existing eluna.conf is not overwritten.
 
-Copy eluna.conf.dist to eluna.conf beside the active worldserver.conf
-(including a custom path selected with -c), then set Eluna.Enabled = 1.
+Copy eluna.conf.dist to configs/modules/eluna.conf (relative to the active
+worldserver.conf, including a custom path selected with -c), then set
+Eluna.Enabled = 1.
 The module loads this file during the normal configuration hook and starts Lua
 after C++ script registration. Lua world events and timed events keep using the
 existing WorldScript bridge.

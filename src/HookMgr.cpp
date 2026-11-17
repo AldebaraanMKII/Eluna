@@ -1187,11 +1187,10 @@ public:
 
     void OnConfigLoad(bool reload) override
     {
-        // The module owns its config; preserve old worldserver.conf settings
-        // when eluna.conf has not been installed yet.
-        std::filesystem::path config = std::filesystem::path(sConfigMgr->GetFilename()).parent_path() / "eluna.conf";
+        // Module configuration lives in configs/modules/eluna.conf.
+        std::filesystem::path config = std::filesystem::path(sConfigMgr->GetFilename()).parent_path() / "modules" / "eluna.conf";
         if (!sConfigMgr->LoadMore(config.string().c_str()) && !reload)
-            SF_LOG_INFO("server.loading", "[mod-eluna]: No eluna.conf; using existing settings or disabled defaults.");
+            SF_LOG_INFO("server.loading", "[mod-eluna]: No configs/modules/eluna.conf; using existing settings or disabled defaults.");
 
         bool enabled = sConfigMgr->GetBoolDefault("Eluna.Enabled", false);
         if (!reload && enabled)

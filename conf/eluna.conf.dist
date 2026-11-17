@@ -4,7 +4,7 @@
 # This file is part of Project SkyFire https://www.projectskyfire.org.
 # See LICENSE.md file for Copyright information
 #
-# Copy this file to eluna.conf alongside the worldserver.conf selected with -c.
+# Copy this file to modules/eluna.conf under the directory of the worldserver.conf selected with -c.
 # Requires MODULES=ON and MOD_ELUNA=ON at configure time.
 # Enable/disable changes require a worldserver restart.
 #
